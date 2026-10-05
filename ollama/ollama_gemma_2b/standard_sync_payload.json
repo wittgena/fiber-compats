@@ -1,0 +1,75 @@
+{
+  "scenario": "standard_sync_payload",
+  "latest_trace_id": "0164b5da300230043979fb2de26498a4",
+  "history_keys": [
+    "0164b5da300230043979fb2de26498a4"
+  ],
+  "traces": {
+    "0164b5da300230043979fb2de26498a4": {
+      "trace_id": "0164b5da300230043979fb2de26498a4",
+      "request_context": {
+        "model": "gemma:2b",
+        "provider": "ollama",
+        "messages": [
+          {
+            "role": "user",
+            "content": "What is the capital of France? Reply in one word."
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": false
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 344.51575000275625,
+        "total_duration_ms": 344.51575000275625
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 0,
+          "chunk": "The capital of France is Paris.\n\nIt's the political and administrative center of France and the place where the French government is located."
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "raw_payload": {
+        "sync_response": {
+          "id": "chatcmpl-826",
+          "object": "chat.completion",
+          "created": 1791164027,
+          "model": "gemma:2b",
+          "system_fingerprint": "fp_ollama",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "The capital of France is Paris.\n\nIt's the political and administrative center of France and the place where the French government is located."
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 34,
+            "prompt_tokens_details": {
+              "cached_tokens": 33
+            },
+            "completion_tokens": 29,
+            "total_tokens": 63
+          }
+        }
+      },
+      "usage": {
+        "prompt_tokens": 34,
+        "prompt_tokens_details": {
+          "cached_tokens": 33
+        },
+        "completion_tokens": 29,
+        "total_tokens": 63
+      }
+    }
+  }
+}
