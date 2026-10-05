@@ -1,0 +1,84 @@
+{
+  "scenario": "sync_declarative_rule",
+  "latest_trace_id": "01656192f802300255239fc1406e00f6",
+  "history_keys": [
+    "01656192f802300255239fc1406e00f6"
+  ],
+  "traces": {
+    "01656192f802300255239fc1406e00f6": {
+      "trace_id": "01656192f802300255239fc1406e00f6",
+      "request_context": {
+        "model": "qwen/qwen3.8-27b",
+        "provider": "groq",
+        "messages": [
+          {
+            "role": "user",
+            "content": "In one concise sentence, what is the primary architectural benefit of using external declarative JSON rulesets instead of hardcoding Python parsing logic for new LLM providers?"
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": false
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 227.35545900650322,
+        "total_duration_ms": 227.35545900650322
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 0,
+          "chunk": "It decouples parsing logic from application code, enabling new providers to be supported with zero code changes by simply adding a configuration file."
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "raw_payload": {
+        "sync_response": {
+          "id": "chatcmpl-13acec04-bd39-4026-b114-a30712f7c07b",
+          "object": "chat.completion",
+          "created": 1791209043,
+          "model": "qwen/qwen3.8-27b",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "It decouples parsing logic from application code, enabling new providers to be supported with zero code changes by simply adding a configuration file."
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "queue_time": 0.005863306,
+            "prompt_tokens": 44,
+            "prompt_time": 0.003239862,
+            "completion_tokens": 27,
+            "completion_time": 0.054329143,
+            "total_tokens": 71,
+            "total_time": 0.057569005
+          },
+          "usage_breakdown": null,
+          "system_fingerprint": "fp_921b8bf8e0",
+          "x_groq": {
+            "id": "req_01m4661x1jenhrkhex97ce70yh",
+            "seed": 1928314262
+          },
+          "service_tier": "on_demand"
+        }
+      },
+      "usage": {
+        "queue_time": 0.005863306,
+        "prompt_tokens": 44,
+        "prompt_time": 0.003239862,
+        "completion_tokens": 27,
+        "completion_time": 0.054329143,
+        "total_tokens": 71,
+        "total_time": 0.057569005
+      }
+    }
+  }
+}

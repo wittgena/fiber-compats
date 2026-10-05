@@ -1,0 +1,101 @@
+{
+  "scenario": "sync_declarative_rule",
+  "latest_trace_id": "0165080127c2300234cb046edc66b88d",
+  "history_keys": [
+    "0165080127c2300234cb046edc66b88d"
+  ],
+  "traces": {
+    "0165080127c2300234cb046edc66b88d": {
+      "trace_id": "0165080127c2300234cb046edc66b88d",
+      "request_context": {
+        "model": "gemini-3.1-flash-lite",
+        "provider": "gemini",
+        "messages": [
+          {
+            "role": "user",
+            "content": "In one concise sentence, what is the primary architectural benefit of using external declarative JSON rulesets instead of hardcoding Python parsing logic for new LLM providers?"
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": false
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 3805.507624994789,
+        "total_duration_ms": 3805.507624994789
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 0,
+          "chunk": "Using external declarative JSON rulesets decouples parsing logic from the codebase, enabling the rapid integration of new LLM providers without requiring redeployment or modifications to core Python source code."
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "raw_payload": {
+        "sync_response": {
+          "content": {
+            "parts": [
+              {
+                "media_resolution": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "file_data": null,
+                "function_call": null,
+                "function_response": null,
+                "inline_data": null,
+                "text": "Using external declarative JSON rulesets decouples parsing logic from the codebase, enabling the rapid integration of new LLM providers without requiring redeployment or modifications to core Python source code.",
+                "thought": null,
+                "thought_signature": "b'\\x12s\\nq\\x01i\\x14}\\x13\\xd0\\xbf\\x19\\xbc\\xb4\\xeaT{\\xc0M\\x9buY<\\xd7\\xf5\\xbb\\xe6\\xafFW\\x00\\xd1^\\xc8\\x16\\x0e{\\xa75\\x7fxJ\\xa4\\xbb\\xe3\\xde\\x16\\x89\"L\\x1f\\x827\\xbb\\xc4\\x858\\xa4q\\x13\\xdd.U\\xa0\\xd1\\xdf\\xc7\\x1c\\x99\\xb0\\xd7\\n|h\\x98\\x18\\xf1\\xc1\\xfd\\x11)\\xd9\\xbf\\xe7\\xd6\\xe9\\xdc<\\xc3\\x17za\\xe9\\xb3\\xde\\xf45\\x96<\\n\\xfb\\xe5v\\xeen\\xbd\\xdbst0\\xa2#\\xb6M\\x9aF@'",
+                "video_metadata": null,
+                "tool_call": null,
+                "tool_response": null,
+                "part_metadata": null,
+                "audio_transcription": null,
+                "media_processing": null,
+                "speech_metadata": null
+              }
+            ],
+            "role": "model"
+          },
+          "citation_metadata": null,
+          "finish_message": null,
+          "token_count": null,
+          "finish_reason": "STOP",
+          "grounding_metadata": null,
+          "avg_logprobs": null,
+          "index": 0,
+          "logprobs_result": null,
+          "safety_ratings": null,
+          "url_context_metadata": null,
+          "usage_metadata": {
+            "cache_tokens_details": null,
+            "cached_content_token_count": null,
+            "candidates_token_count": 35,
+            "candidates_tokens_details": null,
+            "prompt_token_count": 32,
+            "prompt_tokens_details": [
+              {
+                "modality": "TEXT",
+                "token_count": 32
+              }
+            ],
+            "thoughts_token_count": null,
+            "tool_use_prompt_token_count": null,
+            "tool_use_prompt_tokens_details": null,
+            "total_token_count": 67,
+            "traffic_type": null
+          }
+        }
+      },
+      "usage": {
+        "prompt_tokens": 32,
+        "completion_tokens": 35,
+        "total_tokens": 67
+      }
+    }
+  }
+}

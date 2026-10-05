@@ -1,0 +1,280 @@
+{
+  "scenario": "stream_compat_traverser",
+  "latest_trace_id": "016507fdc5823002f1cfccf7f8fe1253",
+  "history_keys": [
+    "016507fdc5823002f1cfccf7f8fe1253"
+  ],
+  "traces": {
+    "016507fdc5823002f1cfccf7f8fe1253": {
+      "trace_id": "016507fdc5823002f1cfccf7f8fe1253",
+      "request_context": {
+        "model": "gemini-3.1-flash-lite",
+        "provider": "gemini",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Briefly explain the role of a 'State Traverser' in an LLM gateway using one short sentence. Then, provide a minimal JSON example of a declarative extraction rule that maps the path 'choices.0.delta.content'."
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": true
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 2777.3519580005086,
+        "total_duration_ms": 3463.5780829994474
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 2777.3519580005086,
+          "chunk": "A"
+        },
+        {
+          "delta_ms": 110.20424999878742,
+          "chunk": " **State Traverser** is a functional component that navigates the nested structure of an LLM'"
+        },
+        {
+          "delta_ms": 130.87854200421134,
+          "chunk": "s response object to locate and extract specific data points based on a defined path.\n\n### Minimal JSON Extraction Rule\n"
+        },
+        {
+          "delta_ms": 190.41308300074888,
+          "chunk": "```json\n{\n  \"field\": \"content\",\n  \"path\": \"choices.0.delta.content\"\n}\n"
+        },
+        {
+          "delta_ms": 118.16091699438402,
+          "chunk": "```"
+        },
+        {
+          "delta_ms": 50.194833005662076,
+          "chunk": "",
+          "finish_reason": "stop"
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "usage": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 74,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 48,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 48
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 122,
+        "traffic_type": null
+      },
+      "raw_payload": {
+        "stream_chunks": [
+          {
+            "id": "chatcmpl-016507fd",
+            "object": "chat.completion.chunk",
+            "model": "gemini-3.1-flash-lite",
+            "choices": [
+              {
+                "index": 0,
+                "delta": {
+                  "content": "A",
+                  "role": "assistant"
+                },
+                "finish_reason": null
+              }
+            ],
+            "usage": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 1,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 48,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 48
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 49,
+              "traffic_type": null
+            }
+          },
+          {
+            "id": "chatcmpl-016507fd",
+            "object": "chat.completion.chunk",
+            "model": "gemini-3.1-flash-lite",
+            "choices": [
+              {
+                "index": 0,
+                "delta": {
+                  "content": " **State Traverser** is a functional component that navigates the nested structure of an LLM'",
+                  "role": "assistant"
+                },
+                "finish_reason": null
+              }
+            ],
+            "usage": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 21,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 48,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 48
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 69,
+              "traffic_type": null
+            }
+          },
+          {
+            "id": "chatcmpl-016507fd",
+            "object": "chat.completion.chunk",
+            "model": "gemini-3.1-flash-lite",
+            "choices": [
+              {
+                "index": 0,
+                "delta": {
+                  "content": "s response object to locate and extract specific data points based on a defined path.\n\n### Minimal JSON Extraction Rule\n",
+                  "role": "assistant"
+                },
+                "finish_reason": null
+              }
+            ],
+            "usage": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 44,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 48,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 48
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 92,
+              "traffic_type": null
+            }
+          },
+          {
+            "id": "chatcmpl-016507fd",
+            "object": "chat.completion.chunk",
+            "model": "gemini-3.1-flash-lite",
+            "choices": [
+              {
+                "index": 0,
+                "delta": {
+                  "content": "```json\n{\n  \"field\": \"content\",\n  \"path\": \"choices.0.delta.content\"\n}\n",
+                  "role": "assistant"
+                },
+                "finish_reason": null
+              }
+            ],
+            "usage": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 73,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 48,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 48
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 121,
+              "traffic_type": null
+            }
+          },
+          {
+            "id": "chatcmpl-016507fd",
+            "object": "chat.completion.chunk",
+            "model": "gemini-3.1-flash-lite",
+            "choices": [
+              {
+                "index": 0,
+                "delta": {
+                  "content": "```",
+                  "role": "assistant"
+                },
+                "finish_reason": null
+              }
+            ],
+            "usage": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 74,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 48,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 48
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 122,
+              "traffic_type": null
+            }
+          },
+          {
+            "id": "chatcmpl-016507fd",
+            "object": "chat.completion.chunk",
+            "model": "gemini-3.1-flash-lite",
+            "choices": [
+              {
+                "index": 0,
+                "delta": {
+                  "role": "assistant"
+                },
+                "finish_reason": "stop"
+              }
+            ],
+            "usage": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 74,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 48,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 48
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 122,
+              "traffic_type": null
+            }
+          }
+        ]
+      }
+    }
+  }
+}

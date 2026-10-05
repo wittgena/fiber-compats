@@ -1,0 +1,91 @@
+{
+  "scenario": "sync_declarative_rule",
+  "latest_trace_id": "016568cd3e4230007d4a4bac25f7edbb",
+  "history_keys": [
+    "016568cd3e4230007d4a4bac25f7edbb"
+  ],
+  "traces": {
+    "016568cd3e4230007d4a4bac25f7edbb": {
+      "trace_id": "016568cd3e4230007d4a4bac25f7edbb",
+      "request_context": {
+        "model": "qwen-3.8-27b",
+        "provider": "cerebras",
+        "messages": [
+          {
+            "role": "user",
+            "content": "In one concise sentence, what is the primary architectural benefit of using external declarative JSON rulesets instead of hardcoding Python parsing logic for new LLM providers?"
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": false
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 449.1133749979781,
+        "total_duration_ms": 449.1133749979781
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 0,
+          "chunk": "\n\nIt decouples provider-specific parsing from core code, enabling new LLM providers to be supported by updating external JSON rules without modifying or redeploying Python logic."
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "raw_payload": {
+        "sync_response": {
+          "id": "chatcmpl-16a5cc86-9cc9-411a-b648-9c54619cec5c",
+          "choices": [
+            {
+              "finish_reason": "stop",
+              "index": 0,
+              "message": {
+                "content": "\n\nIt decouples provider-specific parsing from core code, enabling new LLM providers to be supported by updating external JSON rules without modifying or redeploying Python logic.",
+                "reasoning": "We need to answer user: \"In one concise sentence, what is the primary architectural benefit of using external declarative JSON rulesets instead of hardcoding Python parsing logic for new LLM providers?\"\n\nNeed one concise sentence. Need final only sentence. Need likely: It decouples provider-specific response parsing from core code, allowing new providers to be added/changed without modifying or redeploying Python code.\n\nEnsure concise.\n",
+                "role": "assistant"
+              }
+            }
+          ],
+          "created": 1791210937,
+          "model": "qwen-3.8-27b",
+          "system_fingerprint": "fp_829e8c8e5020fd230ff0",
+          "object": "chat.completion",
+          "usage": {
+            "total_tokens": 205,
+            "completion_tokens": 121,
+            "completion_tokens_details": {
+              "reasoning_tokens": 87
+            },
+            "prompt_tokens": 84,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "image_tokens": 0
+            }
+          },
+          "time_info": {
+            "created": 1791210937.758295,
+            "queue_time": 0.000318591,
+            "prompt_time": 0.003565461,
+            "completion_time": 0.075070808,
+            "total_time": 0.08213472366333008
+          }
+        }
+      },
+      "usage": {
+        "total_tokens": 205,
+        "completion_tokens": 121,
+        "completion_tokens_details": {
+          "reasoning_tokens": 87
+        },
+        "prompt_tokens": 84,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      }
+    }
+  }
+}

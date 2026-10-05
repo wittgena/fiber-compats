@@ -1,0 +1,113 @@
+{
+  "scenario": "stream_compat_traverser",
+  "latest_trace_id": "016568ccb0023000eb4a70d2bee520ce",
+  "history_keys": [
+    "016568ccb0023000eb4a70d2bee520ce"
+  ],
+  "traces": {
+    "016568ccb0023000eb4a70d2bee520ce": {
+      "trace_id": "016568ccb0023000eb4a70d2bee520ce",
+      "request_context": {
+        "model": "qwen-3.8-27b",
+        "provider": "cerebras",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Briefly explain the role of a 'State Traverser' in an LLM gateway using one short sentence. Then, provide a minimal JSON example of a declarative extraction rule that maps the path 'choices.0.delta.content'."
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": true
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 394.77837499725865,
+        "total_duration_ms": 565.7316249998985
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 60.87791699974332,
+          "chunk": "\n\nIt walks through intermediate LLM response states to locate and normalize fields before passing them downstream.\n\n```json\n{\n  \"path\": \"choices.0.delta.content\"\n}\n```",
+          "finish_reason": "stop"
+        },
+        {
+          "delta_ms": 1.4119999977992848,
+          "chunk": "",
+          "finish_reason": "stop"
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "usage": {
+        "total_tokens": 442,
+        "completion_tokens": 343,
+        "completion_tokens_details": {
+          "reasoning_tokens": 302
+        },
+        "prompt_tokens": 99,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "image_tokens": 0
+        }
+      },
+      "raw_payload": {
+        "stream_chunks": [
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"role\":\"assistant\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"We\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" need to respond to user: \\\"Briefly explain the role of\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" a 'State Traverser' in an LLM gateway using one short sentence\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\". Then, provide a minimal JSON example of a declarative\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" extraction rule\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" that\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" maps the path 'choices.0.delta.content'.\\\"\\n\\nNeed final: one short sentence explanation, then JSON example. Ensure JSON minimal likely\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" {\\\"path\\\":\\\"\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"choices.0.delta.content\\\"} maybe mapping\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" maybe \\\"extract\\\": {\\\"path\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"\\\": ...}.\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" They\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" ask declarative extraction rule\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" that maps the path 'choices.0.delta.content\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"'. Could be:\\n{\\n  \\\"extract\\\":\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" {\\n    \\\"path\\\": \\\"choices.0.delta\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\".content\\\"\\n  }\\n}\\nOr if mapping:\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" \\\"map\\\":\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" {\\\"path\\\": ...}.\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" Need minimal. Maybe include \\\"from\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"\\\": \\\"choices.0.delta.content\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"\\\". Need clear.\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"\\n\\nFinal should have sentence\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" and JSON code block\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" maybe. Ensure one short sentence only\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" for explanation? Could\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" be one sentence\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" then JSON. The JSON is\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" not sentence.\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" Good.\\n\\nPotential:\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" \\\"It walks through\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" intermediate LLM response states to\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" locate and normalize fields\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" before passing\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" them\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" to downstream routes.\\\"\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" Then JSON:\\n{\\n  \\\"path\\\":\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" \\\"choices.0.delta.content\\\"\\n}\\nBut declarative\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" extraction rule maybe should be:\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"\\n{\\n  \\\"rule\\\": {\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\"\\n    \\\"type\\\": \\\"extract\\\",\\n    \\\"path\\\":\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" \\\"choices.0.delta.content\\\"\\n  }\\n}\\nMinimal.\\n\\nNeed\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" no more.\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"reasoning\":\" Final concise.\\n\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"content\":\"\\n\\nIt walks through intermediate L\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"content\":\"LM response states to locate and normalize fields before passing them downstream.\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"content\":\"\\n\\n```json\\n{\\n  \\\"path\\\": \\\"choices.0.delta.content\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{\"content\":\"\\\"\\n}\\n```\"},\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\"}",
+          "data: {\"id\":\"chatcmpl-85716df6-9cfc-4c4a-a616-67c77be1ac46\",\"choices\":[{\"delta\":{},\"finish_reason\":\"stop\",\"index\":0}],\"created\":1791210937,\"model\":\"qwen-3.8-27b\",\"system_fingerprint\":\"fp_829e8c8e5020fd230ff0\",\"object\":\"chat.completion.chunk\",\"usage\":{\"total_tokens\":442,\"completion_tokens\":343,\"completion_tokens_details\":{\"reasoning_tokens\":302},\"prompt_tokens\":99,\"prompt_tokens_details\":{\"cached_tokens\":0,\"image_tokens\":0}},\"time_info\":{\"created\":1791210937.2498453,\"queue_time\":0.000274259,\"prompt_time\":0.003937549,\"completion_time\":0.228389146,\"total_time\":0.23421168327331543}}",
+          "data: [DONE]"
+        ]
+      }
+    }
+  }
+}
