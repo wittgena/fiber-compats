@@ -1,0 +1,45 @@
+{
+  "scenario": "soft_rule_intent",
+  "latest_trace_id": "016cd1b772c23000ac6aeffd5352f546",
+  "history_keys": [
+    "016cd1b772c23000ac6aeffd5352f546"
+  ],
+  "traces": {
+    "016cd1b772c23000ac6aeffd5352f546": {
+      "trace_id": "016cd1b772c23000ac6aeffd5352f546",
+      "request_context": {
+        "model": "gemma-3-1b-it-Q4_K_M.gguf",
+        "provider": "llama_server",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Format this to JSON."
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": false
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 559.1122499899939,
+        "total_duration_ms": 559.1122499899939
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 0,
+          "chunk": "Please provide the text you would like me to format into JSON. I need the content to convert it! 😊 \n\nJust paste the text here, and I'll do my best to format it correctly."
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "usage": {
+        "completion_tokens": 43,
+        "prompt_tokens": 14,
+        "total_tokens": 57
+      }
+    }
+  }
+}

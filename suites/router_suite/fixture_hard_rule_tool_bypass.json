@@ -1,0 +1,45 @@
+{
+  "scenario": "hard_rule_tool_bypass",
+  "latest_trace_id": "016cd1b5f0c23000eeb940e9a0eb419f",
+  "history_keys": [
+    "016cd1b5f0c23000eeb940e9a0eb419f"
+  ],
+  "traces": {
+    "016cd1b5f0c23000eeb940e9a0eb419f": {
+      "trace_id": "016cd1b5f0c23000eeb940e9a0eb419f",
+      "request_context": {
+        "model": "gemini-3.1-flash-lite",
+        "provider": "gemini",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Fetch the weather."
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": false
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 1536.6360420011915,
+        "total_duration_ms": 1536.6360420011915
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 0,
+          "chunk": ""
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "usage": {
+        "prompt_tokens": 13,
+        "completion_tokens": 10,
+        "total_tokens": 23
+      }
+    }
+  }
+}
