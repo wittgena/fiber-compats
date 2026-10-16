@@ -1,12 +1,12 @@
 {
   "scenario": "stream_compat_traverser",
-  "latest_trace_id": "016507fdc5823002f1cfccf7f8fe1253",
+  "latest_trace_id": "0172336270023000cc8aec2a93722592",
   "history_keys": [
-    "016507fdc5823002f1cfccf7f8fe1253"
+    "0172336270023000cc8aec2a93722592"
   ],
   "traces": {
-    "016507fdc5823002f1cfccf7f8fe1253": {
-      "trace_id": "016507fdc5823002f1cfccf7f8fe1253",
+    "0172336270023000cc8aec2a93722592": {
+      "trace_id": "0172336270023000cc8aec2a93722592",
       "request_context": {
         "model": "gemini-3.1-flash-lite",
         "provider": "gemini",
@@ -23,32 +23,24 @@
         }
       },
       "network_metrics": {
-        "ttfb_ms": 2777.3519580005086,
-        "total_duration_ms": 3463.5780829994474
+        "ttfb_ms": 1284.7658329992555,
+        "total_duration_ms": 1595.32391699031
       },
       "response_timeline": [
         {
-          "delta_ms": 2777.3519580005086,
-          "chunk": "A"
+          "delta_ms": 1284.7658329992555,
+          "chunk": "A **"
         },
         {
-          "delta_ms": 110.20424999878742,
-          "chunk": " **State Traverser** is a functional component that navigates the nested structure of an LLM'"
+          "delta_ms": 129.01299999793991,
+          "chunk": "State Traverser** is a component that navigates the nested structure of an LLM's streaming response to locate and extract specific data fields in real-time.\n\n### Minimal JSON Extraction Rule\nThis rule maps the"
         },
         {
-          "delta_ms": 130.87854200421134,
-          "chunk": "s response object to locate and extract specific data points based on a defined path.\n\n### Minimal JSON Extraction Rule\n"
+          "delta_ms": 130.17204200150445,
+          "chunk": " path `choices.0.delta.content` to a destination key named `token`:\n\n```json\n{\n  \"source_path\": \"choices.0.delta.content\",\n  \"target_key\": \"token\"\n}\n```"
         },
         {
-          "delta_ms": 190.41308300074888,
-          "chunk": "```json\n{\n  \"field\": \"content\",\n  \"path\": \"choices.0.delta.content\"\n}\n"
-        },
-        {
-          "delta_ms": 118.16091699438402,
-          "chunk": "```"
-        },
-        {
-          "delta_ms": 50.194833005662076,
+          "delta_ms": 50.0853750272654,
           "chunk": "",
           "finish_reason": "stop"
         }
@@ -57,192 +49,114 @@
         "occurred": false
       },
       "usage": {
-        "cache_tokens_details": null,
-        "cached_content_token_count": null,
-        "candidates_token_count": 74,
-        "candidates_tokens_details": null,
-        "prompt_token_count": 48,
-        "prompt_tokens_details": [
-          {
-            "modality": "TEXT",
-            "token_count": 48
-          }
-        ],
-        "thoughts_token_count": null,
-        "tool_use_prompt_token_count": null,
-        "tool_use_prompt_tokens_details": null,
-        "total_token_count": 122,
-        "traffic_type": null
+        "prompt_tokens": 48,
+        "completion_tokens": 99,
+        "total_tokens": 147
       },
       "raw_payload": {
         "stream_chunks": [
           {
-            "id": "chatcmpl-016507fd",
+            "id": "chatcmpl-01723362",
             "object": "chat.completion.chunk",
             "model": "gemini-3.1-flash-lite",
             "choices": [
               {
                 "index": 0,
                 "delta": {
-                  "content": "A",
-                  "role": "assistant"
+                  "role": "assistant",
+                  "content": "A **"
                 },
                 "finish_reason": null
               }
             ],
             "usage": {
-              "cache_tokens_details": null,
-              "cached_content_token_count": null,
-              "candidates_token_count": 1,
-              "candidates_tokens_details": null,
-              "prompt_token_count": 48,
-              "prompt_tokens_details": [
-                {
-                  "modality": "TEXT",
-                  "token_count": 48
-                }
-              ],
-              "thoughts_token_count": null,
-              "tool_use_prompt_token_count": null,
-              "tool_use_prompt_tokens_details": null,
-              "total_token_count": 49,
-              "traffic_type": null
+              "prompt_tokens": 48,
+              "completion_tokens": 2,
+              "total_tokens": 50
             }
           },
           {
-            "id": "chatcmpl-016507fd",
+            "id": "chatcmpl-01723362",
             "object": "chat.completion.chunk",
             "model": "gemini-3.1-flash-lite",
             "choices": [
               {
                 "index": 0,
                 "delta": {
-                  "content": " **State Traverser** is a functional component that navigates the nested structure of an LLM'",
-                  "role": "assistant"
+                  "role": "assistant",
+                  "content": "State Traverser** is a component that navigates the nested structure of an LLM'"
                 },
                 "finish_reason": null
               }
             ],
             "usage": {
-              "cache_tokens_details": null,
-              "cached_content_token_count": null,
-              "candidates_token_count": 21,
-              "candidates_tokens_details": null,
-              "prompt_token_count": 48,
-              "prompt_tokens_details": [
-                {
-                  "modality": "TEXT",
-                  "token_count": 48
-                }
-              ],
-              "thoughts_token_count": null,
-              "tool_use_prompt_token_count": null,
-              "tool_use_prompt_tokens_details": null,
-              "total_token_count": 69,
-              "traffic_type": null
+              "prompt_tokens": 48,
+              "completion_tokens": 20,
+              "total_tokens": 68
             }
           },
           {
-            "id": "chatcmpl-016507fd",
+            "id": "chatcmpl-01723362",
             "object": "chat.completion.chunk",
             "model": "gemini-3.1-flash-lite",
             "choices": [
               {
                 "index": 0,
                 "delta": {
-                  "content": "s response object to locate and extract specific data points based on a defined path.\n\n### Minimal JSON Extraction Rule\n",
-                  "role": "assistant"
+                  "role": "assistant",
+                  "content": "s streaming response to locate and extract specific data fields in real-time.\n\n### Minimal JSON Extraction Rule\nThis rule maps the"
                 },
                 "finish_reason": null
               }
             ],
             "usage": {
-              "cache_tokens_details": null,
-              "cached_content_token_count": null,
-              "candidates_token_count": 44,
-              "candidates_tokens_details": null,
-              "prompt_token_count": 48,
-              "prompt_tokens_details": [
-                {
-                  "modality": "TEXT",
-                  "token_count": 48
-                }
-              ],
-              "thoughts_token_count": null,
-              "tool_use_prompt_token_count": null,
-              "tool_use_prompt_tokens_details": null,
-              "total_token_count": 92,
-              "traffic_type": null
+              "prompt_tokens": 48,
+              "completion_tokens": 46,
+              "total_tokens": 94
             }
           },
           {
-            "id": "chatcmpl-016507fd",
+            "id": "chatcmpl-01723362",
             "object": "chat.completion.chunk",
             "model": "gemini-3.1-flash-lite",
             "choices": [
               {
                 "index": 0,
                 "delta": {
-                  "content": "```json\n{\n  \"field\": \"content\",\n  \"path\": \"choices.0.delta.content\"\n}\n",
-                  "role": "assistant"
+                  "role": "assistant",
+                  "content": " path `choices.0.delta.content` to a destination key named `token`:\n\n```json\n{\n  \"source"
                 },
                 "finish_reason": null
               }
             ],
             "usage": {
-              "cache_tokens_details": null,
-              "cached_content_token_count": null,
-              "candidates_token_count": 73,
-              "candidates_tokens_details": null,
-              "prompt_token_count": 48,
-              "prompt_tokens_details": [
-                {
-                  "modality": "TEXT",
-                  "token_count": 48
-                }
-              ],
-              "thoughts_token_count": null,
-              "tool_use_prompt_token_count": null,
-              "tool_use_prompt_tokens_details": null,
-              "total_token_count": 121,
-              "traffic_type": null
+              "prompt_tokens": 48,
+              "completion_tokens": 73,
+              "total_tokens": 121
             }
           },
           {
-            "id": "chatcmpl-016507fd",
+            "id": "chatcmpl-01723362",
             "object": "chat.completion.chunk",
             "model": "gemini-3.1-flash-lite",
             "choices": [
               {
                 "index": 0,
                 "delta": {
-                  "content": "```",
-                  "role": "assistant"
+                  "role": "assistant",
+                  "content": "_path\": \"choices.0.delta.content\",\n  \"target_key\": \"token\"\n}\n```"
                 },
                 "finish_reason": null
               }
             ],
             "usage": {
-              "cache_tokens_details": null,
-              "cached_content_token_count": null,
-              "candidates_token_count": 74,
-              "candidates_tokens_details": null,
-              "prompt_token_count": 48,
-              "prompt_tokens_details": [
-                {
-                  "modality": "TEXT",
-                  "token_count": 48
-                }
-              ],
-              "thoughts_token_count": null,
-              "tool_use_prompt_token_count": null,
-              "tool_use_prompt_tokens_details": null,
-              "total_token_count": 122,
-              "traffic_type": null
+              "prompt_tokens": 48,
+              "completion_tokens": 99,
+              "total_tokens": 147
             }
           },
           {
-            "id": "chatcmpl-016507fd",
+            "id": "chatcmpl-01723362",
             "object": "chat.completion.chunk",
             "model": "gemini-3.1-flash-lite",
             "choices": [
@@ -255,22 +169,9 @@
               }
             ],
             "usage": {
-              "cache_tokens_details": null,
-              "cached_content_token_count": null,
-              "candidates_token_count": 74,
-              "candidates_tokens_details": null,
-              "prompt_token_count": 48,
-              "prompt_tokens_details": [
-                {
-                  "modality": "TEXT",
-                  "token_count": 48
-                }
-              ],
-              "thoughts_token_count": null,
-              "tool_use_prompt_token_count": null,
-              "tool_use_prompt_tokens_details": null,
-              "total_token_count": 122,
-              "traffic_type": null
+              "prompt_tokens": 48,
+              "completion_tokens": 99,
+              "total_tokens": 147
             }
           }
         ]

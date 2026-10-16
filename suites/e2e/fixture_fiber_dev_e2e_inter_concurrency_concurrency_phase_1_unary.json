@@ -1,0 +1,45 @@
+{
+  "scenario": "concurrency_phase_1_unary",
+  "latest_trace_id": "91fb1c88779db7187d44d6fc5bdd8f1f",
+  "history_keys": [
+    "91fb1c88779db7187d44d6fc5bdd8f1f"
+  ],
+  "traces": {
+    "91fb1c88779db7187d44d6fc5bdd8f1f": {
+      "trace_id": "91fb1c88779db7187d44d6fc5bdd8f1f",
+      "request_context": {
+        "model": "gemma-3-1b-it-Q4_K_M.gguf",
+        "provider": "llama_server",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Summarize the core architectural benefits of a deterministic, event-driven duplex pipeline over nested callback chains in exactly two concise paragraphs."
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": 512,
+          "stream": false
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 1674.662499979604,
+        "total_duration_ms": 1674.662499979604
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 0,
+          "chunk": "Deterministic, event-driven duplex pipelines offer significant architectural benefits by providing **clear, predictable flow of data**. Each stage in the pipeline executes sequentially and independently, relying on well-defined events to trigger transitions. This eliminates the potential for race conditions and synchronization issues inherent in nested callbacks, making the system significantly more robust and easier to reason about. \n\nFurthermore, the event-driven nature allows for **better error handling and scalability**.  A failure in one stage doesn’t necessarily halt the entire pipeline; instead, it triggers a specific event that can be handled and potentially retried, improving resilience.  The pipeline’s structure also lends itself to easier parallelization and scaling, as each stage operates independently and can be executed concurrently."
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "usage": {
+        "completion_tokens": 148,
+        "prompt_tokens": 34,
+        "total_tokens": 182
+      }
+    }
+  }
+}

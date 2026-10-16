@@ -1,8 +1,9 @@
 {
   "scenario": "sync_declarative_rule",
-  "latest_trace_id": "01655a397e42300458eb346e3af27805",
+  "latest_trace_id": "0172406c564230046f09cbc9ca72cdd2",
   "history_keys": [
-    "01655a397e42300458eb346e3af27805"
+    "01655a397e42300458eb346e3af27805",
+    "0172406c564230046f09cbc9ca72cdd2"
   ],
   "traces": {
     "01655a397e42300458eb346e3af27805": {
@@ -71,6 +72,74 @@
         "prompt_tokens": 31,
         "completion_tokens": 32,
         "total_tokens": 231
+      }
+    },
+    "0172406c564230046f09cbc9ca72cdd2": {
+      "trace_id": "0172406c564230046f09cbc9ca72cdd2",
+      "request_context": {
+        "model": "command-r-08-2024",
+        "provider": "cohere",
+        "messages": [
+          {
+            "role": "user",
+            "content": "In one concise sentence, what is the primary architectural benefit of using external declarative JSON rulesets instead of hardcoding Python parsing logic for new LLM providers?"
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": false
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 4313.262709008995,
+        "total_duration_ms": 4313.262709008995
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 0,
+          "chunk": "Using external declarative JSON rulesets provides a flexible, maintainable, and scalable architecture for integrating new LLM providers, offering a clear separation of concerns and reducing hardcoded dependencies."
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "raw_payload": {
+        "sync_response": {
+          "response_id": "8489e3a5-52b2-40e5-bd27-8e404d6188b5",
+          "text": "Using external declarative JSON rulesets provides a flexible, maintainable, and scalable architecture for integrating new LLM providers, offering a clear separation of concerns and reducing hardcoded dependencies.",
+          "generation_id": "68cf2292-5723-47cb-9cdc-e6550b2fb7eb",
+          "chat_history": [
+            {
+              "role": "USER",
+              "message": "In one concise sentence, what is the primary architectural benefit of using external declarative JSON rulesets instead of hardcoding Python parsing logic for new LLM providers?"
+            },
+            {
+              "role": "CHATBOT",
+              "message": "Using external declarative JSON rulesets provides a flexible, maintainable, and scalable architecture for integrating new LLM providers, offering a clear separation of concerns and reducing hardcoded dependencies."
+            }
+          ],
+          "finish_reason": "COMPLETE",
+          "meta": {
+            "api_version": {
+              "version": "1"
+            },
+            "billed_units": {
+              "input_tokens": 31,
+              "output_tokens": 35
+            },
+            "tokens": {
+              "input_tokens": 231,
+              "output_tokens": 36
+            },
+            "cached_tokens": 192
+          }
+        }
+      },
+      "usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 35,
+        "total_tokens": 66
       }
     }
   }

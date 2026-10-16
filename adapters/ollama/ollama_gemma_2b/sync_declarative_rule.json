@@ -1,12 +1,12 @@
 {
   "scenario": "sync_declarative_rule",
-  "latest_trace_id": "0164f5c268c23002705f6b3abd1c3dcb",
+  "latest_trace_id": "0172339818023000fc7d6ee46f054ae9",
   "history_keys": [
-    "0164f5c268c23002705f6b3abd1c3dcb"
+    "0172339818023000fc7d6ee46f054ae9"
   ],
   "traces": {
-    "0164f5c268c23002705f6b3abd1c3dcb": {
-      "trace_id": "0164f5c268c23002705f6b3abd1c3dcb",
+    "0172339818023000fc7d6ee46f054ae9": {
+      "trace_id": "0172339818023000fc7d6ee46f054ae9",
       "request_context": {
         "model": "gemma:2b",
         "provider": "ollama",
@@ -23,13 +23,13 @@
         }
       },
       "network_metrics": {
-        "ttfb_ms": 461.5936670015799,
-        "total_duration_ms": 461.5936670015799
+        "ttfb_ms": 297.9162909905426,
+        "total_duration_ms": 297.9162909905426
       },
       "response_timeline": [
         {
           "delta_ms": 0,
-          "chunk": "External declarative JSON rulesets offer a modular and maintainable approach to defining the LLM extraction and processing flow, reducing code complexity and facilitating future modification."
+          "chunk": "Using external declarative JSON rulesets offers a modular and reusable approach to parsing new LLM providers by leveraging the power of external sources."
         }
       ],
       "exception_boundary": {
@@ -37,9 +37,9 @@
       },
       "raw_payload": {
         "sync_response": {
-          "id": "chatcmpl-281",
+          "id": "chatcmpl-863",
           "object": "chat.completion",
-          "created": 1791180780,
+          "created": 1792069405,
           "model": "gemma:2b",
           "system_fingerprint": "fp_ollama",
           "choices": [
@@ -47,7 +47,7 @@
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "External declarative JSON rulesets offer a modular and maintainable approach to defining the LLM extraction and processing flow, reducing code complexity and facilitating future modification."
+                "content": "Using external declarative JSON rulesets offers a modular and reusable approach to parsing new LLM providers by leveraging the power of external sources."
               },
               "finish_reason": "stop"
             }
@@ -55,20 +55,20 @@
           "usage": {
             "prompt_tokens": 53,
             "prompt_tokens_details": {
-              "cached_tokens": 10
+              "cached_tokens": 52
             },
-            "completion_tokens": 31,
-            "total_tokens": 84
+            "completion_tokens": 27,
+            "total_tokens": 80
           }
         }
       },
       "usage": {
         "prompt_tokens": 53,
         "prompt_tokens_details": {
-          "cached_tokens": 10
+          "cached_tokens": 52
         },
-        "completion_tokens": 31,
-        "total_tokens": 84
+        "completion_tokens": 27,
+        "total_tokens": 80
       }
     }
   }

@@ -1,0 +1,454 @@
+{
+  "scenario": "concurrency_phase_2_stream",
+  "latest_trace_id": "702ca5c072174a90d8dde521a6f47d8f",
+  "history_keys": [
+    "702ca5c072174a90d8dde521a6f47d8f"
+  ],
+  "traces": {
+    "702ca5c072174a90d8dde521a6f47d8f": {
+      "trace_id": "702ca5c072174a90d8dde521a6f47d8f",
+      "request_context": {
+        "model": "gemma-3-1b-it-Q4_K_M.gguf",
+        "provider": "llama_server",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Write a detailed 4-part technical walkthrough of how asynchronous byte-stream framing, backpressure watermarks, and coroutine context propagation operate under high concurrency."
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": 1024,
+          "stream": true
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 42.967792018316686,
+        "total_duration_ms": 12407.17299998505
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 102.46920795179904,
+          "chunk": "## 4-Part Technical Walkthrough: Asynchronous"
+        },
+        {
+          "delta_ms": 102.46370901586488,
+          "chunk": " Byte-Stream Framing, Backpressure Watermarks,"
+        },
+        {
+          "delta_ms": 102.62233298271894,
+          "chunk": " and Coroutine Context Propagation Under High Concurrency\n\n"
+        },
+        {
+          "delta_ms": 102.48479200527072,
+          "chunk": "This walkthrough details how these three techniques – Asynchronous"
+        },
+        {
+          "delta_ms": 102.47408301802352,
+          "chunk": " Byte-Stream Framing, Backpressure Watermarks,"
+        },
+        {
+          "delta_ms": 102.36737498780712,
+          "chunk": " and Coroutine Context Propagation – work together to manage"
+        },
+        {
+          "delta_ms": 102.51287498977035,
+          "chunk": " concurrency and prevent bottlenecks in high-load systems."
+        },
+        {
+          "delta_ms": 102.6566670043394,
+          "chunk": " It’s designed for developers and system architects aiming"
+        },
+        {
+          "delta_ms": 102.58304100716487,
+          "chunk": " to optimize performance in scenarios with significant concurrent requests."
+        },
+        {
+          "delta_ms": 102.46399999596179,
+          "chunk": "\n\n**1. Introduction: The Challenge of High"
+        },
+        {
+          "delta_ms": 102.59520902764052,
+          "chunk": " Concurrency**\n\nHigh concurrency – a system handling"
+        },
+        {
+          "delta_ms": 103.59808296198025,
+          "chunk": " many requests simultaneously – is a double-edged sword"
+        },
+        {
+          "delta_ms": 102.82316704979166,
+          "chunk": ". While it boosts throughput, it also introduces significant"
+        },
+        {
+          "delta_ms": 102.45899995788932,
+          "chunk": " challenges:\n\n* **Resource Exhaustion:**  "
+        },
+        {
+          "delta_ms": 102.3561250185594,
+          "chunk": "Threads/processes struggle to handle excessive work, leading"
+        },
+        {
+          "delta_ms": 102.34533296898007,
+          "chunk": " to CPU contention, memory pressure, and I/"
+        },
+        {
+          "delta_ms": 102.53141704015434,
+          "chunk": "O bottlenecks.\n* **Deadlocks and Star"
+        },
+        {
+          "delta_ms": 101.06779099442065,
+          "chunk": "vation:**  Without proper mechanisms, a limited number"
+        },
+        {
+          "delta_ms": 102.099834010005,
+          "chunk": " of threads can monopolize resources, leading to starvation"
+        },
+        {
+          "delta_ms": 102.50583296874538,
+          "chunk": " of others.\n* **Performance Degradation:**"
+        },
+        {
+          "delta_ms": 102.35641698818654,
+          "chunk": "  Simply adding more threads doesn’t always translate"
+        },
+        {
+          "delta_ms": 102.71087504224852,
+          "chunk": " to performance gains; it can exacerbate existing issues."
+        },
+        {
+          "delta_ms": 102.6539159938693,
+          "chunk": "\n\nThese challenges require intelligent concurrency management strategies to ensure"
+        },
+        {
+          "delta_ms": 102.71362500498071,
+          "chunk": " responsiveness and stability.\n\n**2. Asynchronous"
+        },
+        {
+          "delta_ms": 102.60787495644763,
+          "chunk": " Byte-Stream Framing (ABF)**\n\nAB"
+        },
+        {
+          "delta_ms": 102.66416700324044,
+          "chunk": "F is a fundamental technique designed to handle bursts of"
+        },
+        {
+          "delta_ms": 102.73500002222136,
+          "chunk": " incoming data by strategically managing the *flow* of"
+        },
+        {
+          "delta_ms": 102.6430000201799,
+          "chunk": " data.\n\n* **Concept:**  Instead of"
+        },
+        {
+          "delta_ms": 101.1280000093393,
+          "chunk": " processing every incoming byte-stream immediately, ABF"
+        },
+        {
+          "delta_ms": 101.18204198079184,
+          "chunk": " divides it into smaller, manageable chunks.  It"
+        },
+        {
+          "delta_ms": 102.61233296478167,
+          "chunk": " employs a \"frame\" – a lightweight, serialized"
+        },
+        {
+          "delta_ms": 102.76537504978478,
+          "chunk": " representation – to bundle data and metadata.\n*"
+        },
+        {
+          "delta_ms": 102.53820795333013,
+          "chunk": " **Mechanism:**\n    * **Chunking:**"
+        },
+        {
+          "delta_ms": 102.4396670400165,
+          "chunk": " Incoming data is split into fixed-size chunks."
+        },
+        {
+          "delta_ms": 102.65737498411909,
+          "chunk": "  The chunk size is dynamically adjusted based on the"
+        },
+        {
+          "delta_ms": 102.53329202532768,
+          "chunk": " current load and resource availability.\n    * **"
+        },
+        {
+          "delta_ms": 104.4482909492217,
+          "chunk": "Frame Encoding:** Each chunk is associated with a unique"
+        },
+        {
+          "delta_ms": 104.55500002717599,
+          "chunk": " frame.  Frame metadata includes:\n        *"
+        },
+        {
+          "delta_ms": 104.42837502341717,
+          "chunk": " **Timestamp:**  Marks when the frame was generated"
+        },
+        {
+          "delta_ms": 104.64033397147432,
+          "chunk": ".\n        * **Data Payload:** The actual"
+        },
+        {
+          "delta_ms": 104.8827079939656,
+          "chunk": " byte-stream data.\n        * **Identifier"
+        },
+        {
+          "delta_ms": 104.59016700042412,
+          "chunk": ":** A unique identifier for the frame, crucial for"
+        },
+        {
+          "delta_ms": 104.62541598826647,
+          "chunk": " tracking and managing flows.\n    * **Flow"
+        },
+        {
+          "delta_ms": 104.53891701763496,
+          "chunk": " Management:** The system continuously monitors the number of active"
+        },
+        {
+          "delta_ms": 104.99916702974588,
+          "chunk": " frames. When the number of frames exceeds a threshold"
+        },
+        {
+          "delta_ms": 104.58204097812995,
+          "chunk": ", it triggers a “backpressure” event."
+        },
+        {
+          "delta_ms": 104.82079198118299,
+          "chunk": "\n* **Benefits:**\n    * **Reduced"
+        },
+        {
+          "delta_ms": 104.44912500679493,
+          "chunk": " CPU Load:**  The system doesn't have"
+        },
+        {
+          "delta_ms": 104.67237501870841,
+          "chunk": " to process every byte-stream, allowing it to"
+        },
+        {
+          "delta_ms": 104.64308300288394,
+          "chunk": " focus on more critical tasks.\n    * **"
+        },
+        {
+          "delta_ms": 104.7915419912897,
+          "chunk": "Increased Throughput:**  By managing data flow,"
+        },
+        {
+          "delta_ms": 104.71395798958838,
+          "chunk": " ABF can handle a larger volume of requests concurrently"
+        },
+        {
+          "delta_ms": 104.48625002754852,
+          "chunk": ".\n* **Implementation Considerations:**\n    *"
+        },
+        {
+          "delta_ms": 103.32320898305625,
+          "chunk": " **Frame Size Tuning:** Crucial for balancing overhead"
+        },
+        {
+          "delta_ms": 102.91437502019107,
+          "chunk": " and responsiveness.  Too small, and it’"
+        },
+        {
+          "delta_ms": 102.9767079744488,
+          "chunk": "s wasteful; too large, and it adds complexity"
+        },
+        {
+          "delta_ms": 102.62716701254249,
+          "chunk": ".\n    * **Timestamp Management:** Accurate timestamps"
+        },
+        {
+          "delta_ms": 101.73504101112485,
+          "chunk": " are vital for flow identification and potential prioritization.\n\n\n"
+        },
+        {
+          "delta_ms": 103.00254198955372,
+          "chunk": "**3. Backpressure Watermarks**\n\nBack"
+        },
+        {
+          "delta_ms": 103.06379199028015,
+          "chunk": "pressure watermarks are a *reactive* mechanism that"
+        },
+        {
+          "delta_ms": 103.13441598555073,
+          "chunk": " responds to the *rate* of data flow,"
+        },
+        {
+          "delta_ms": 103.3302090363577,
+          "chunk": " rather than directly managing the data itself. They are"
+        },
+        {
+          "delta_ms": 104.30708294734359,
+          "chunk": " implemented as a *monitoring* layer.\n\n*"
+        },
+        {
+          "delta_ms": 103.18533302051947,
+          "chunk": " **Concept:**  When the system detects a back"
+        },
+        {
+          "delta_ms": 102.88625000976026,
+          "chunk": "pressure situation (e.g., frame count exceeds"
+        },
+        {
+          "delta_ms": 103.01133402390406,
+          "chunk": " a threshold), it emits a \"watermark\""
+        },
+        {
+          "delta_ms": 102.36470797099173,
+          "chunk": " – a signal indicating a slowdown.\n* **"
+        },
+        {
+          "delta_ms": 102.43262501899153,
+          "chunk": "Mechanism:**\n    * **Watermark Generation:**"
+        },
+        {
+          "delta_ms": 103.05833298480138,
+          "chunk": "  The system periodically calculates a \"watermark\""
+        },
+        {
+          "delta_ms": 102.87795902695507,
+          "chunk": " representing the *rate* at which incoming data is"
+        },
+        {
+          "delta_ms": 102.94404096202925,
+          "chunk": " being processed.  This watermark is calculated based on"
+        },
+        {
+          "delta_ms": 102.88566700182855,
+          "chunk": " the current frame count, the current processing rate,"
+        },
+        {
+          "delta_ms": 102.80445800162852,
+          "chunk": " and a configurable delay.\n    * **Signal"
+        },
+        {
+          "delta_ms": 103.16262498963624,
+          "chunk": " Propagation:**  The watermark is then propagated through the"
+        },
+        {
+          "delta_ms": 103.11020899098366,
+          "chunk": " system, acting as a \"signal\" to all"
+        },
+        {
+          "delta_ms": 102.96937503153458,
+          "chunk": " components that need to react to the backpressure."
+        },
+        {
+          "delta_ms": 102.93816600460559,
+          "chunk": "\n* **Benefits:**\n    * **Prevent"
+        },
+        {
+          "delta_ms": 103.5462089930661,
+          "chunk": "ing Resource Exhaustion:**  By signaling a"
+        },
+        {
+          "delta_ms": 106.28729098243639,
+          "chunk": " slowdown, backpressure watermarks prevent threads from monopol"
+        },
+        {
+          "delta_ms": 104.13387499283999,
+          "chunk": "izing resources.\n    * **Dynamic Adjustment:**"
+        },
+        {
+          "delta_ms": 103.05879201041535,
+          "chunk": "  The watermark rate can be dynamically adjusted based on"
+        },
+        {
+          "delta_ms": 103.53545803809538,
+          "chunk": " the system's workload and resource constraints.\n"
+        },
+        {
+          "delta_ms": 103.61487499903888,
+          "chunk": "* **Implementation Considerations:**\n    * **Water"
+        },
+        {
+          "delta_ms": 103.78516698256135,
+          "chunk": "mark Granularity:**  Determining the appropriate watermark"
+        },
+        {
+          "delta_ms": 103.41029200935736,
+          "chunk": " granularity is key. Too coarse, and it’"
+        },
+        {
+          "delta_ms": 103.4008749993518,
+          "chunk": "s ineffective; too fine, and it’s"
+        },
+        {
+          "delta_ms": 101.58258298179135,
+          "chunk": " computationally expensive.\n    * **Watermark Propagation"
+        },
+        {
+          "delta_ms": 111.87058297218755,
+          "chunk": " Delay:**  The delay between watermark generation and signal"
+        },
+        {
+          "delta_ms": 106.17762501351535,
+          "chunk": " propagation is critical for responsiveness.\n\n\n**4."
+        },
+        {
+          "delta_ms": 102.80929203145206,
+          "chunk": " Coroutine Context Propagation**\n\nCoroutines are lightweight"
+        },
+        {
+          "delta_ms": 103.63316698931158,
+          "chunk": ", concurrent functions that are essential for modern systems."
+        },
+        {
+          "delta_ms": 104.26733299391344,
+          "chunk": " Coroutine context propagation allows for efficient communication and synchronization"
+        },
+        {
+          "delta_ms": 110.32995802816004,
+          "chunk": " between coroutines.\n\n* **Concept:** Cor"
+        },
+        {
+          "delta_ms": 103.86137495515868,
+          "chunk": "outines maintain a \"context\" (a snapshot"
+        },
+        {
+          "delta_ms": 105.3454169887118,
+          "chunk": " of their state) and can share this context with"
+        },
+        {
+          "delta_ms": 102.89950005244464,
+          "chunk": " other coroutines.\n* **Mechanism:**\n"
+        },
+        {
+          "delta_ms": 103.09937497368082,
+          "chunk": "    * **Context Propagation:** When a coroutine"
+        },
+        {
+          "delta_ms": 103.06104202754796,
+          "chunk": " starts, it receives a context that includes its current"
+        },
+        {
+          "delta_ms": 104.01845799060538,
+          "chunk": " state, execution history, and potentially, a lock"
+        },
+        {
+          "delta_ms": 103.91879198141396,
+          "chunk": " or semaphore.\n    * **Context Sharing:**"
+        },
+        {
+          "delta_ms": 103.03704102989286,
+          "chunk": "  When a coroutine completes, it passes its"
+        },
+        {
+          "delta_ms": 103.28012495301664,
+          "chunk": " context to other coroutines that need to continue from"
+        },
+        {
+          "delta_ms": 52.4188750423491,
+          "chunk": " its point.\n    ",
+          "finish_reason": "length"
+        },
+        {
+          "delta_ms": 1764.7976669832133,
+          "chunk": "",
+          "finish_reason": "stop"
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      }
+    }
+  }
+}

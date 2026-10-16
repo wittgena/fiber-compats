@@ -1,8 +1,9 @@
 {
   "scenario": "stream_compat_traverser",
-  "latest_trace_id": "01655a35994230029611ac4f3629c374",
+  "latest_trace_id": "017240689e8230021d43df4594ad814a",
   "history_keys": [
-    "01655a35994230029611ac4f3629c374"
+    "01655a35994230029611ac4f3629c374",
+    "017240689e8230021d43df4594ad814a"
   ],
   "traces": {
     "01655a35994230029611ac4f3629c374": {
@@ -182,6 +183,182 @@
           "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\n}\"}",
           "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\n```\"}",
           "{\"is_finished\":true,\"event_type\":\"stream-end\",\"response\":{\"response_id\":\"4ddef22d-efd8-4e22-95c3-b2c4d7a8c347\",\"text\":\"A State Traverser is responsible for navigating and extracting specific data from the LLM's output, following a defined path to retrieve the desired information.\\n\\n```json\\n{\\n  \\\"path\\\": \\\"choices.0.delta.content\\\"\\n}\\n```\",\"generation_id\":\"02c7169b-b258-4c97-a65f-41beee324b30\",\"chat_history\":[{\"role\":\"USER\",\"message\":\"Briefly explain the role of a 'State Traverser' in an LLM gateway using one short sentence. Then, provide a minimal JSON example of a declarative extraction rule that maps the path 'choices.0.delta.content'.\"},{\"role\":\"CHATBOT\",\"message\":\"A State Traverser is responsible for navigating and extracting specific data from the LLM's output, following a defined path to retrieve the desired information.\\n\\n```json\\n{\\n  \\\"path\\\": \\\"choices.0.delta.content\\\"\\n}\\n```\"}],\"finish_reason\":\"COMPLETE\",\"meta\":{\"api_version\":{\"version\":\"1\"},\"billed_units\":{\"input_tokens\":47,\"output_tokens\":52},\"tokens\":{\"input_tokens\":247,\"output_tokens\":53},\"cached_tokens\":192}},\"finish_reason\":\"COMPLETE\"}"
+        ]
+      }
+    },
+    "017240689e8230021d43df4594ad814a": {
+      "trace_id": "017240689e8230021d43df4594ad814a",
+      "request_context": {
+        "model": "command-r-08-2024",
+        "provider": "cohere",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Briefly explain the role of a 'State Traverser' in an LLM gateway using one short sentence. Then, provide a minimal JSON example of a declarative extraction rule that maps the path 'choices.0.delta.content'."
+          }
+        ],
+        "parameters": {
+          "temperature": null,
+          "max_tokens": null,
+          "stream": true
+        }
+      },
+      "network_metrics": {
+        "ttfb_ms": 852.7529580169357,
+        "total_duration_ms": 3804.8130000242963
+      },
+      "response_timeline": [
+        {
+          "delta_ms": 147.9656249866821,
+          "chunk": "A State Traverser"
+        },
+        {
+          "delta_ms": 119.3793750135228,
+          "chunk": " is responsible"
+        },
+        {
+          "delta_ms": 109.87674997886643,
+          "chunk": " for navigating"
+        },
+        {
+          "delta_ms": 119.73983305506408,
+          "chunk": " and extracting"
+        },
+        {
+          "delta_ms": 110.30987498816103,
+          "chunk": " specific data"
+        },
+        {
+          "delta_ms": 120.30204199254513,
+          "chunk": " from the"
+        },
+        {
+          "delta_ms": 110.58325000340119,
+          "chunk": " LLM"
+        },
+        {
+          "delta_ms": 109.88829197594896,
+          "chunk": "'s output"
+        },
+        {
+          "delta_ms": 109.71433302620426,
+          "chunk": ", following"
+        },
+        {
+          "delta_ms": 120.18533301306888,
+          "chunk": " a defined"
+        },
+        {
+          "delta_ms": 109.9306249525398,
+          "chunk": " path to"
+        },
+        {
+          "delta_ms": 109.80462504085153,
+          "chunk": " retrieve the"
+        },
+        {
+          "delta_ms": 120.04595895996317,
+          "chunk": " desired information"
+        },
+        {
+          "delta_ms": 190.13108301442116,
+          "chunk": ".\n\n```"
+        },
+        {
+          "delta_ms": 169.97808299493045,
+          "chunk": "json\n{"
+        },
+        {
+          "delta_ms": 119.97566698119044,
+          "chunk": "\n  \""
+        },
+        {
+          "delta_ms": 109.65179203776643,
+          "chunk": "path\":"
+        },
+        {
+          "delta_ms": 109.39491598401219,
+          "chunk": " \"choices"
+        },
+        {
+          "delta_ms": 110.2516669780016,
+          "chunk": ".0"
+        },
+        {
+          "delta_ms": 111.27766704885289,
+          "chunk": ".delta"
+        },
+        {
+          "delta_ms": 109.48133299825713,
+          "chunk": ".content"
+        },
+        {
+          "delta_ms": 176.83362500974908,
+          "chunk": "\"\n}"
+        },
+        {
+          "delta_ms": 103.24712499277666,
+          "chunk": "\n```"
+        },
+        {
+          "delta_ms": 20.71008295752108,
+          "chunk": "",
+          "finish_reason": "stop"
+        }
+      ],
+      "exception_boundary": {
+        "occurred": false
+      },
+      "raw_payload": {
+        "stream_chunks": [
+          "{\"is_finished\":false,\"event_type\":\"stream-start\",\"generation_id\":\"3e2e62ad-b99d-42a9-9a10-36dfbb2e125a\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"A\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" State\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" Travers\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"er\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" is\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" responsible\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" for\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" navigating\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" and\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" extracting\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" specific\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" data\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" from\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" the\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" L\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"LM\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"'s\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" output\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\",\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" following\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" a\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" defined\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" path\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" to\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" retrieve\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" the\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" desired\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" information\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\".\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\n\\n```\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"json\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\n{\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\n  \\\"\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"path\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\\":\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\" \\\"\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"choices\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\".\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"0\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\".\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"delta\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\".\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"content\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\\"\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\n}\"}",
+          "{\"is_finished\":false,\"event_type\":\"text-generation\",\"text\":\"\\n```\"}",
+          "{\"is_finished\":true,\"event_type\":\"stream-end\",\"response\":{\"response_id\":\"1df096e4-8561-4bdd-8008-30efebf2684b\",\"text\":\"A State Traverser is responsible for navigating and extracting specific data from the LLM's output, following a defined path to retrieve the desired information.\\n\\n```json\\n{\\n  \\\"path\\\": \\\"choices.0.delta.content\\\"\\n}\\n```\",\"generation_id\":\"3e2e62ad-b99d-42a9-9a10-36dfbb2e125a\",\"chat_history\":[{\"role\":\"USER\",\"message\":\"Briefly explain the role of a 'State Traverser' in an LLM gateway using one short sentence. Then, provide a minimal JSON example of a declarative extraction rule that maps the path 'choices.0.delta.content'.\"},{\"role\":\"CHATBOT\",\"message\":\"A State Traverser is responsible for navigating and extracting specific data from the LLM's output, following a defined path to retrieve the desired information.\\n\\n```json\\n{\\n  \\\"path\\\": \\\"choices.0.delta.content\\\"\\n}\\n```\"}],\"finish_reason\":\"COMPLETE\",\"meta\":{\"api_version\":{\"version\":\"1\"},\"billed_units\":{\"input_tokens\":47,\"output_tokens\":52},\"tokens\":{\"input_tokens\":247,\"output_tokens\":53},\"cached_tokens\":192}},\"finish_reason\":\"COMPLETE\"}"
         ]
       }
     }

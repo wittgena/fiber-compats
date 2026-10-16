@@ -1,12 +1,12 @@
 {
   "scenario": "sync_declarative_rule",
-  "latest_trace_id": "0165080127c2300234cb046edc66b88d",
+  "latest_trace_id": "01723363ffc23000b29c319cc5b3ebe3",
   "history_keys": [
-    "0165080127c2300234cb046edc66b88d"
+    "01723363ffc23000b29c319cc5b3ebe3"
   ],
   "traces": {
-    "0165080127c2300234cb046edc66b88d": {
-      "trace_id": "0165080127c2300234cb046edc66b88d",
+    "01723363ffc23000b29c319cc5b3ebe3": {
+      "trace_id": "01723363ffc23000b29c319cc5b3ebe3",
       "request_context": {
         "model": "gemini-3.1-flash-lite",
         "provider": "gemini",
@@ -23,13 +23,13 @@
         }
       },
       "network_metrics": {
-        "ttfb_ms": 3805.507624994789,
-        "total_duration_ms": 3805.507624994789
+        "ttfb_ms": 2469.212583033368,
+        "total_duration_ms": 2469.212583033368
       },
       "response_timeline": [
         {
           "delta_ms": 0,
-          "chunk": "Using external declarative JSON rulesets decouples parsing logic from the codebase, enabling the rapid integration of new LLM providers without requiring redeployment or modifications to core Python source code."
+          "chunk": "Externalizing logic into JSON decouples provider-specific parsing schemas from the core codebase, enabling the integration of new LLMs without requiring full application redeployments or code modifications."
         }
       ],
       "exception_boundary": {
@@ -47,9 +47,9 @@
                 "function_call": null,
                 "function_response": null,
                 "inline_data": null,
-                "text": "Using external declarative JSON rulesets decouples parsing logic from the codebase, enabling the rapid integration of new LLM providers without requiring redeployment or modifications to core Python source code.",
+                "text": "Externalizing logic into JSON decouples provider-specific parsing schemas from the core codebase, enabling the integration of new LLMs without requiring full application redeployments or code modifications.",
                 "thought": null,
-                "thought_signature": "b'\\x12s\\nq\\x01i\\x14}\\x13\\xd0\\xbf\\x19\\xbc\\xb4\\xeaT{\\xc0M\\x9buY<\\xd7\\xf5\\xbb\\xe6\\xafFW\\x00\\xd1^\\xc8\\x16\\x0e{\\xa75\\x7fxJ\\xa4\\xbb\\xe3\\xde\\x16\\x89\"L\\x1f\\x827\\xbb\\xc4\\x858\\xa4q\\x13\\xdd.U\\xa0\\xd1\\xdf\\xc7\\x1c\\x99\\xb0\\xd7\\n|h\\x98\\x18\\xf1\\xc1\\xfd\\x11)\\xd9\\xbf\\xe7\\xd6\\xe9\\xdc<\\xc3\\x17za\\xe9\\xb3\\xde\\xf45\\x96<\\n\\xfb\\xe5v\\xeen\\xbd\\xdbst0\\xa2#\\xb6M\\x9aF@'",
+                "thought_signature": "b'\\x12s\\nq\\x01i\\x14}\\x13:\\xc2\\x02\\x81\\xadQ=\\xd2\\xc2\\x01x<\\x91e\\x1a\\xe7F\\x17\\x98\\x95z\\x87\\x8b]1\\x19p\\xf0\\x8b\\xd6\\xc5\\x92\\x93\\xcf@\\xf2\\xd2\\xc9u\\xaa\\xb1\\xa3W\\x9dt\\xeeUxt#7G\\rb\\x14\\xba\\xd3[\\x15\\xb3WS\\x99\\x89\\xad\\'W\\xd3\\xb1\"\\xab\\xa60S\\xa0\\xcf\\xe9\\xd0\\xb5)\\x02\\xda\\xb7l\\x82\\xa235\\x07\\xea\\xb9\\x0e\\xeec\\xab\\xe81\\x06\\x81,\\xce\\xd1\"\\xe1py\\x15\\xe0'",
                 "video_metadata": null,
                 "tool_call": null,
                 "tool_response": null,

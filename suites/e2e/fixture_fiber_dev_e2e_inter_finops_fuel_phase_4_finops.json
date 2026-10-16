@@ -1,57 +1,39 @@
 {
   "scenario": "fuel_phase_4_finops",
-  "latest_trace_id": "ada6947a4c4cb639b920e4952843f0c7",
+  "latest_trace_id": "7e676c1ba4e2ac2f9102ce1ec96522a6",
   "history_keys": [
-    "ada6947a4c4cb639b920e4952843f0c7"
+    "7e676c1ba4e2ac2f9102ce1ec96522a6"
   ],
   "traces": {
-    "ada6947a4c4cb639b920e4952843f0c7": {
-      "trace_id": "ada6947a4c4cb639b920e4952843f0c7",
+    "7e676c1ba4e2ac2f9102ce1ec96522a6": {
+      "trace_id": "7e676c1ba4e2ac2f9102ce1ec96522a6",
       "request_context": {
-        "model": "gemini-3.1-flash-lite",
-        "provider": "gemini",
+        "model": "gemma-3-1b-it-Q4_K_M.gguf",
+        "provider": "llama_server",
         "messages": [
           {
             "role": "user",
-            "content": "Write a long story about FinOps."
+            "content": "Write a comprehensive, deeply technical 8-section architectural whitepaper on Enterprise AI FinOps, Real-Time Token Metering, and Deterministic Stream Governance. Section 1: Distributed Token Ledger Topologies and Atomic Quota Enforcement. Section 2: Asynchronous Stream Interception and Sub-Millisecond Kill-Switch Mechanics. Section 3: Cryptographic Mandate Translation (JWT to AP2) and Zero-Trust Identity Binding. Section 4: Time-Window Chunk Coalescing and Application-Layer VCR Replay Determinism. Section 5: Multi-Tenant Cost Attribution, Dynamic Tier Fallback, and Budget Circuit Breakers. Section 6: Edge Caching, Semantic Routing, and Pre-Flight Payload Sanitization. Section 7: Failure Modes, Network Partition Recovery, and Idempotent Billing Reconciliation. Section 8: Full Reference Architecture and Production Deployment Checklist. Provide exhaustive explanations, concrete architectural trade-offs, and detailed step-by-step walkthroughs for every single section without summarizing or skipping any details."
           }
         ],
         "parameters": {
           "temperature": null,
-          "max_tokens": null,
+          "max_tokens": 2048,
           "stream": true
         }
       },
       "network_metrics": {
-        "ttfb_ms": 3854.212207981618,
-        "total_duration_ms": 3860.1132500043605
+        "ttfb_ms": 94.44716601865366,
+        "total_duration_ms": 146.82741602882743
       },
       "response_timeline": [
         {
-          "delta_ms": 3854.212207981618,
-          "chunk": "The server room of AetherCorp did not hum; it sh"
+          "delta_ms": 51.8846670165658,
+          "chunk": "##"
         }
       ],
       "exception_boundary": {
         "occurred": false
-      },
-      "usage": {
-        "cache_tokens_details": null,
-        "cached_content_token_count": null,
-        "candidates_token_count": 13,
-        "candidates_tokens_details": null,
-        "prompt_token_count": 9,
-        "prompt_tokens_details": [
-          {
-            "modality": "TEXT",
-            "token_count": 9
-          }
-        ],
-        "thoughts_token_count": null,
-        "tool_use_prompt_token_count": null,
-        "tool_use_prompt_tokens_details": null,
-        "total_token_count": 22,
-        "traffic_type": null
       }
     }
   }
